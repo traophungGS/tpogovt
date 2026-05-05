@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Government of Trao Phung Organisation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <div class="logo-section">
+                <img src="https://api.dicebear.com/7.x/shapes/svg?seed=tpologo" alt="TPO Logo" class="logo">
+                <h1>Government of Trao Phung Organisation</h1>
+            </div>
+        </div>
+    </header>
+
+    <nav class="main-nav">
+        <ul>
+            <li><a href="#cabinet">Cabinet</a></li>
+            <li><a href="#semblae">Semblæ</a></li>
+            <li><a href="#house">House</a></li>
+            <li><a href="#money-congress">Money Congress</a></li>
+            <li><a href="#militia-council">Militia Council</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+        <section class="homepage" id="homepage">
+            <div class="boxes-grid">
+                <div class="nav-box" data-section="cabinet">
+                    <div class="box-bg" style="background-image: url('https://api.dicebear.com/7.x/shapes/svg?seed=cabinet')"></div>
+                    <div class="box-content">
+                        <h2>Cabinet</h2>
+                        <p>Executive government administration</p>
+                    </div>
+                </div>
+
+                <div class="nav-box" data-section="semblae">
+                    <div class="box-bg" style="background-image: url('https://api.dicebear.com/7.x/shapes/svg?seed=semblae')"></div>
+                    <div class="box-content">
+                        <h2>Semblæ</h2>
+                        <p>Legislative assembly</p>
+                    </div>
+                </div>
+
+                <div class="nav-box" data-section="house">
+                    <div class="box-bg" style="background-image: url('https://api.dicebear.com/7.x/shapes/svg?seed=house')"></div>
+                    <div class="box-content">
+                        <h2>House</h2>
+                        <p>Lower chamber</p>
+                    </div>
+                </div>
+
+                <div class="nav-box" data-section="money-congress">
+                    <div class="box-bg" style="background-image: url('https://api.dicebear.com/7.x/shapes/svg?seed=moneycongress')"></div>
+                    <div class="box-content">
+                        <h2>Money Congress</h2>
+                        <p>Financial authority</p>
+                    </div>
+                </div>
+
+                <div class="nav-box" data-section="militia-council">
+                    <div class="box-bg" style="background-image: url('https://api.dicebear.com/7.x/shapes/svg?seed=militiacouncil')"></div>
+                    <div class="box-content">
+                        <h2>Militia Council</h2>
+                        <p>Defence authority</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cabinet Section -->
+        <section id="cabinet" class="section hidden">
+            <h2>Cabinet</h2>
+            <div class="tabs">
+                <button class="tab-button active" data-tab="cabinet-members">Members</button>
+                <button class="tab-button" data-tab="cabinet-news">News</button>
+            </div>
+
+            <div id="cabinet-members" class="tab-content active">
+                <div class="search-filter">
+                    <input type="text" id="cabinet-members-search" placeholder="Search members..." class="search-box">
+                    <div class="filters">
+                        <button class="filter-btn" data-filter="a-z">A-Z</button>
+                        <button class="filter-btn" data-filter="party">By Party</button>
+                    </div>
+                </div>
+                <div class="members-list" id="cabinet-members-list">
+                    <div class="member">
+                        <h4>Orthodoron</h4>
+                        <p>General Secretary</p>
+                        <p class="party">Progressive Party</p>
+                    </div>
+                    <div class="member">
+                        <h4>Helena Voss</h4>
+                        <p>Minister of Foreign Affairs</p>
+                        <p class="party">Progressive Party</p>
+                    </div>
+                    <div class="member">
+                        <h4>Marcus Chen</h4>
+                        <p>Minister of Defence</p>
+                        <p class="party">Conservative Alliance</p>
+                    </div>
+                    <div class="member">
+                        <h4>Dr. Sofia Rossi</h4>
+                        <p>Minister of Health</p>
+                        <p class="party">Progressive Party</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="cabinet-news" class="tab-content">
+                <div class="search-filter">
+                    <input type="text" placeholder="Search news..." class="search-box">
+                </div>
+                <div class="news-list">
+                    <article class="news-item">
+                        <h3>General Secretary unveils government website</h3>
+                        <p class="news-meta">
+                            <span class="date">4 May 2026</span>
+                            <span class="author">Clerk of the Cabinet</span>
+                        </p>
+                        <p class="news-summary">Ortho releases government website</p>
+                        <p class="news-body">The General Secretary Orthodoron today released the official Trao Phung government website that provides citizens with basic legislative information, official announcements, and news updates to help them track political developments more easily. The platform aims to improve transparency, simplify access to government resources, and strengthen communication between state institutions and the public through centralized digital services.</p>
+                        <button class="share-btn" onclick="shareNews('General Secretary unveils government website')">Share</button>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Semblæ Section -->
+        <section id="semblae" class="section hidden">
+            <h2>Semblæ</h2>
+            <div class="tabs">
+                <button class="tab-button active" data-tab="semblae-members">Members</button>
+                <button class="tab-button" data-tab="semblae-committees">Committees</button>
+                <button class="tab-button" data-tab="semblae-news">News</button>
+            </div>
+
+            <div id="semblae-members" class="tab-content active">
+                <div class="search-filter">
+                    <input type="text" placeholder="Search members..." class="search-box">
+                    <div class="filters">
+                        <button class="filter-btn" data-filter="a-z">A-Z</button>
+                        <button class="filter-btn" data-filter="party">By Party</button>
+                        <button class="filter-btn" data-filter="seats">By Seats</button>
+                    </div>
+                </div>
+                <div class="members-list">
+                    <div class="member">
+                        <h4>Victoria Blackwood</h4>
+                        <p>Speaker of Semblæ</p>
+                        <p class="party">Progressive Party</p>
+                        <p class="seats">Seat: 1</p>
+                    </div>
+                    <div class="member">
+                        <h4>James Hartley</h4>
+                        <p>Deputy Speaker</p>
+                        <p class="party">Conservative Alliance</p>
+                        <p class="seats">Seat: 2</p>
+                    </div>
+                    <div class="member">
+                        <h4>Elena Rodriguez</h4>
+                        <p>Committee Chair - Finance</p>
+                        <p class="party">Progressive Party</p>
+                        <p class="seats">Seat: 15</p>
+                    </div>
+                    <div class="member">
+                        <h4>Thomas Wright</h4>
+                        <p>Committee Chair - Defence</p>
+                        <p class="party">Conservative Alliance</p>
+                        <p class="seats">Seat: 8</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="semblae-committees" class="tab-content">
+                <div class="search-filter">
+                    <input type="text" placeholder="Search committees..." class="search-box">
+                </div>
+                <div class="committees-list">
+                    <div class="committee">
+                        <h3>Finance Committee</h3>
+                        <p>Oversees budget and financial matters</p>
+                        <p class="chair">Chair: Elena Rodriguez</p>
+                    </div>
+                    <div class="committee">
+                        <h3>Defence Committee</h3>
+                        <p>Manages defence and security policies</p>
+                        <p class="chair">Chair: Thomas Wright</p>
+                    </div>
+                    <div class="committee">
+                        <h3>Health & Welfare Committee</h3>
+                        <p>Oversees public health and welfare</p>
+                        <p class="chair">Chair: Margaret Sullivan</p>
+                    </div>
+                    <div class="committee">
+                        <h3>Foreign Affairs Committee</h3>
+                        <p>Handles international relations</p>
+                        <p class="chair">Chair: Robert Garrison</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="semblae-news" class="tab-content">
+                <div class="search-filter">
+                    <input type="text" placeholder="Search news..." class="search-box">
+                </div>
+                <div class="news-list">
+                    <article class="news-item">
+                        <h3>Semblæ Passes Budget Reform Bill</h3>
+                        <p class="news-meta">
+                            <span class="date">2 May 2026</span>
+                            <span class="author">Legislative Reporter</span>
+                        </p>
+                        <p class="news-summary">Budget reform legislation approved in committee</p>
+                        <p class="news-body">The Semblæ has passed comprehensive budget reform legislation aimed at improving fiscal efficiency and transparency in government spending. The bill received support from both major parties and is expected to streamline administrative processes across all government departments.</p>
+                        <button class="share-btn" onclick="shareNews('Semblæ Passes Budget Reform Bill')">Share</button>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- House Section -->
+        <section id="house" class="section hidden">
+            <h2>House</h2>
+            <div class="tabs">
+                <button class="tab-button active" data-tab="house-members">Members</button>
+                <button class="tab-button" data-tab="house-news">News</button>
+            </div>
+
+            <div id="house-members" class="tab-content active">
+                <div class="search-filter">
+                    <input type="text" placeholder="Search members..." class="search-box">
+                    <div class="filters">
+                        <button class="filter-btn" data-filter="a-z">A-Z</button>
+                        <button class="filter-btn" data-filter="party">By Party</button>
+                        <button class="filter-btn" data-filter="seats">By Seats</button>
+                    </div>
+                </div>
+                <div class="members-list">
+                    <div class="member">
+                        <h4>Richard Palmer</h4>
+                        <p>Speaker of the House</p>
+                        <p class="party">Progressive Party</p>
+                        <p class="seats">Seat: 1</p>
+                    </div>
+                    <div class="member">
+                        <h4>Catherine Moore</h4>
+                        <p>Deputy Speaker</p>
+                        <p class="party">Conservative Alliance</p>
+                        <p class="seats">Seat: 5</p>
+                    </div>
+                    <div class="member">
+                        <h4>David Zhang</h4>
+                        <p>Committee Chair - Education</p>
+                        <p class="party">Progressive Party</p>
+                        <p class="seats">Seat: 22</p>
+                    </div>
+                    <div class="member">
+                        <h4>Amanda Foster</h4>
+                        <p>Majority Whip</p>
+                        <p class="party">Progressive Party</p>
+                        <p class="seats">Seat: 18</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="house-news" class="tab-content">
+                <div class="search-filter">
+                    <input type="text" placeholder="Search news..." class="search-box">
+                </div>
+                <div class="news-list">
+                    <article class="news-item">
+                        <h3>House Approves Education Initiative</h3>
+                        <p class="news-meta">
+                            <span class="date">1 May 2026</span>
+                            <span class="author">House Reporter</span>
+                        </p>
+                        <p class="news-summary">New education funding bill passes lower chamber</p>
+                        <p class="news-body">The House has approved a landmark education initiative providing increased funding for schools nationwide. The bill aims to improve educational standards and provide better resources to underfunded institutions across the country.</p>
+                        <button class="share-btn" onclick="shareNews('House Approves Education Initiative')">Share</button>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Money Congress Section -->
+        <section id="money-congress" class="section hidden">
+            <h2>Money Congress</h2>
+            <div class="tabs">
+                <button class="tab-button active" data-tab="money-members">Members</button>
+                <button class="tab-button" data-tab="money-news">News</button>
+            </div>
+
+            <div id="money-members" class="tab-content active">
+                <div class="search-filter">
+                    <input type="text" placeholder="Search members..." class="search-box">
+                    <div class="filters">
+                        <button class="filter-btn" data-filter="a-z">A-Z</button>
+                        <button class="filter-btn" data-filter="party">By Party</button>
+                        <button class="filter-btn" data-filter="seats">By Seats</button>
+                    </div>
+                </div>
+                <div class="members-list">
+                    <div class="member">
+                        <h4>Governor Alexandra Stone</h4>
+                        <p>Governor of Money Congress</p>
+                        <p class="party">Independent</p>
+                        <p class="seats">Seat: 1</p>
+                    </div>
+                    <div class="member">
+                        <h4>Dr. Michael Warren</h4>
+                        <p>Deputy Governor</p>
+                        <p class="party">Conservative Alliance</p>
+                        <p class="seats">Seat: 3</p>
+                    </div>
+                    <div class="member">
+                        <h4>Patricia Nelson</h4>
+                        <p>Director - Economic Policy</p>
+                        <p class="party">Progressive Party</p>
+                        <p class="seats">Seat: 7</p>
+                    </div>
+                    <div class="member">
+                        <h4>William Grant</h4>
+                        <p>Director - Monetary Policy</p>
+                        <p class="party">Independent</p>
+                        <p class="seats">Seat: 12</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="money-news" class="tab-content">
+                <div class="search-filter">
+                    <input type="text" placeholder="Search news..." class="search-box">
+                </div>
+                <div class="news-list">
+                    <article class="news-item">
+                        <h3>Money Congress Maintains Interest Rates</h3>
+                        <p class="news-meta">
+                            <span class="date">3 May 2026</span>
+                            <span class="author">Financial Correspondent</span>
+                        </p>
+                        <p class="news-summary">Central monetary authority holds key interest rates</p>
+                        <p class="news-body">The Money Congress has announced its decision to maintain current interest rates at their existing levels. The decision reflects confidence in current economic stability while monitoring inflationary trends closely.</p>
+                        <button class="share-btn" onclick="shareNews('Money Congress Maintains Interest Rates')">Share</button>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Militia Council Section -->
+        <section id="militia-council" class="section hidden">
+            <h2>Militia Council</h2>
+            <div class="tabs">
+                <button class="tab-button active" data-tab="militia-members">Members</button>
+                <button class="tab-button" data-tab="militia-news">News</button>
+            </div>
+
+            <div id="militia-members" class="tab-content active">
+                <div class="search-filter">
+                    <input type="text" placeholder="Search members..." class="search-box">
+                    <div class="filters">
+                        <button class="filter-btn" data-filter="a-z">A-Z</button>
+                        <button class="filter-btn" data-filter="party">By Party</button>
+                        <button class="filter-btn" data-filter="seats">By Seats</button>
+                    </div>
+                </div>
+                <div class="members-list">
+                    <div class="member">
+                        <h4>General Command Officer Torres</h4>
+                        <p>Commander-in-Chief</p>
+                        <p class="party">Military Service</p>
+                        <p class="seats">Rank: General</p>
+                    </div>
+                    <div class="member">
+                        <h4>Admiral Victoria Blackthorn</h4>
+                        <p>Naval Commander</p>
+                        <p class="party">Military Service</p>
+                        <p class="seats">Rank: Admiral</p>
+                    </div>
+                    <div class="member">
+                        <h4>Colonel James Erikson</h4>
+                        <p>Army Operations Commander</p>
+                        <p class="party">Military Service</p>
+                        <p class="seats">Rank: Colonel</p>
+                    </div>
+                    <div class="member">
+                        <h4>Air Marshal Sarah Chen</h4>
+                        <p>Air Force Commander</p>
+                        <p class="party">Military Service</p>
+                        <p class="seats">Rank: Air Marshal</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="militia-news" class="tab-content">
+                <div class="search-filter">
+                    <input type="text" placeholder="Search news..." class="search-box">
+                </div>
+                <div class="news-list">
+                    <article class="news-item">
+                        <h3>Militia Council Completes Training Exercise</h3>
+                        <p class="news-meta">
+                            <span class="date">28 April 2026</span>
+                            <span class="author">Defence Reporter</span>
+                        </p>
+                        <p class="news-summary">Annual readiness exercise concludes successfully</p>
+                        <p class="news-body">The Militia Council has successfully concluded its annual comprehensive training exercise, demonstrating readiness and operational capability across all branches. The exercise involved coordination between military and civilian agencies to ensure national security preparedness.</p>
+                        <button class="share-btn" onclick="shareNews('Militia Council Completes Training Exercise')">Share</button>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2026 Government of Trao Phung Organisation. All rights reserved.</p>
+            <a href="https://discord.gg/pRzbfzv4eq" class="visit-us-btn" target="_blank">Visit us</a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
