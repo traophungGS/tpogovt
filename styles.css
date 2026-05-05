@@ -574,31 +574,3 @@ body {
         gap: 0.5rem;
     }
 }
-
-/* Clickable Member Profiles */
-.clickable-member {
-    cursor: pointer;
-    position: relative;
-}
-
-.clickable-member:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
-}
-
-.member-profile {
-    margin-top: 1rem;
-    padding-top: 1rem;
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
-    animation: fadeIn 0.3s ease;
-}
-
-.member-profile p {
-    color: var(--text-color);
-    font-style: italic;
-    margin: 0;
-}
-
-.hidden {
-    display: none !important;
-}
