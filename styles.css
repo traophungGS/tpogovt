@@ -57,6 +57,20 @@ body {
     letter-spacing: 0.5px;
 }
 
+/* Banner Section */
+.banner-section {
+    width: 100%;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.banner-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
 /* Main Navigation */
 .main-nav {
     background-color: #f9fafb;
