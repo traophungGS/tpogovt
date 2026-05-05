@@ -1,3 +1,4 @@
+```javascript
 document.addEventListener('DOMContentLoaded', function() {
     const homepage = document.getElementById('homepage');
     const navBoxes = document.querySelectorAll('.nav-box');
@@ -6,11 +7,12 @@ document.addEventListener('DOMContentLoaded', function() {
     const tabButtons = document.querySelectorAll('.tab-button');
     const searchBoxes = document.querySelectorAll('.search-box');
     const filterButtons = document.querySelectorAll('.filter-btn');
+    const clickableMembers = document.querySelectorAll('.clickable-member');
 
     // Show homepage initially
     homepage.classList.remove('hidden');
 
-    // Function to show section
+    // Section navigation
     function showSection(sectionId) {
         homepage.classList.add('hidden');
 
@@ -19,16 +21,30 @@ document.addEventListener('DOMContentLoaded', function() {
         });
 
         const targetSection = document.getElementById(sectionId);
+
         if (targetSection) {
             targetSection.classList.remove('hidden');
+
+            // Reset tabs
+            const sectionTabs = targetSection.querySelectorAll('.tab-button');
+            const sectionContents = targetSection.querySelectorAll('.tab-content');
+
+            sectionTabs.forEach((tab, index) => {
+                tab.classList.toggle('active', index === 0);
+            });
+
+            sectionContents.forEach((content, index) => {
+                content.classList.toggle('active', index === 0);
+            });
+
             window.scrollTo({
-                top: targetSection.offsetTop - 100,
+                top: targetSection.offsetTop - 80,
                 behavior: 'smooth'
             });
         }
     }
 
-    // Homepage boxes navigation
+    // Homepage box clicks
     navBoxes.forEach(box => {
         box.addEventListener('click', function() {
             const sectionId = this.getAttribute('data-section');
@@ -36,7 +52,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Top nav links
+    // Navbar clicks
     navLinks.forEach(link => {
         link.addEventListener('click', function(e) {
             e.preventDefault();
@@ -99,11 +115,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     function sortMembers(container, filterType) {
-        const membersList = container;
-
-        if (!membersList) return;
-
-        const members = Array.from(membersList.querySelectorAll('.member'));
+        const members = Array.from(container.querySelectorAll('.member'));
 
         if (filterType === 'a-z') {
             members.sort((a, b) =>
@@ -129,12 +141,10 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         }
 
-        members.forEach(member => membersList.appendChild(member));
+        members.forEach(member => container.appendChild(member));
     }
 
-    // Clickable member profiles
-    const clickableMembers = document.querySelectorAll('.clickable-member');
-
+    // Clickable profiles
     clickableMembers.forEach(member => {
         member.addEventListener('click', function(e) {
             if (e.target.tagName.toLowerCase() === 'button') return;
@@ -148,7 +158,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// Share function
+// Share functionality
 function shareNews(title) {
     const url = window.location.href;
     const text = `Check out this news from the Government of Trao Phung: "${title}"`;
@@ -171,3 +181,4 @@ function shareNews(title) {
             });
     }
 }
+```
