@@ -44,11 +44,12 @@ body {
 }
 
 .logo {
-    width: 60px;
-    height: 60px;
+    width: 100px;
+    height: 50px;
     border-radius: 8px;
     background: rgba(255, 255, 255, 0.2);
     padding: 5px;
+    object-fit: contain;
 }
 
 .header h1 {
@@ -474,6 +475,11 @@ body {
         font-size: 1.4rem;
     }
 
+    .logo {
+        width: 80px;
+        height: 40px;
+    }
+
     .boxes-grid {
         grid-template-columns: 1fr;
         gap: 1rem;
@@ -535,8 +541,8 @@ body {
     }
 
     .logo {
-        width: 50px;
-        height: 50px;
+        width: 70px;
+        height: 35px;
     }
 
     .header h1 {
