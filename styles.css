@@ -192,12 +192,50 @@ body {
     }
 }
 
+/* Section Header with Link Button */
+.section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.section-header h2 {
+    font-size: 2rem;
+    color: var(--primary-color);
+    border-bottom: 3px solid var(--border-color);
+    padding-bottom: 1rem;
+    flex: 1;
+    min-width: 200px;
+}
+
 .section h2 {
     font-size: 2rem;
     margin-bottom: 2rem;
     color: var(--primary-color);
     border-bottom: 3px solid var(--border-color);
     padding-bottom: 1rem;
+}
+
+.section-link-btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.section-link-btn:hover {
+    background: var(--secondary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(99, 102, 241, 0.4);
 }
 
 /* Tabs */
@@ -502,6 +540,21 @@ body {
         font-size: 0.9rem;
     }
 
+    .section-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .section-header h2 {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .section-link-btn {
+        width: 100%;
+        text-align: center;
+    }
+
     .section h2 {
         font-size: 1.5rem;
     }
@@ -578,6 +631,16 @@ body {
 
     .box-content h2 {
         font-size: 1.2rem;
+    }
+
+    .section-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .section-link-btn {
+        width: 100%;
+        text-align: center;
     }
 
     .news-item {
