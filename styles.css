@@ -449,8 +449,15 @@ body {
 }
 
 .footer p {
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
     font-size: 0.95rem;
+}
+
+.footer-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .visit-us-btn {
@@ -529,6 +536,14 @@ body {
         flex: 1;
         text-align: center;
     }
+
+    .footer-buttons {
+        flex-direction: column;
+    }
+
+    .visit-us-btn {
+        width: 100%;
+    }
 }
 
 @media (max-width: 480px) {
@@ -572,5 +587,13 @@ body {
     .news-meta {
         flex-direction: column;
         gap: 0.5rem;
+    }
+
+    .footer-buttons {
+        flex-direction: column;
+    }
+
+    .visit-us-btn {
+        width: 100%;
     }
 }
