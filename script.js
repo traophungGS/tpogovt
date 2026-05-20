@@ -5,6 +5,11 @@ document.addEventListener('DOMContentLoaded', function() {
     const homepage = document.querySelector('.homepage');
     const mainNav = document.querySelector('.main-nav');
     const mainNavLinks = document.querySelectorAll('.main-nav a');
+    
+    // Modal elements
+    const modal = document.getElementById('memberModal');
+    const closeBtn = document.querySelector('.close');
+    const clickableMembers = document.querySelectorAll('.clickable-member');
 
     navBoxes.forEach(box => {
         box.addEventListener('click', function() {
@@ -143,6 +148,34 @@ document.addEventListener('DOMContentLoaded', function() {
             membersList.appendChild(member);
         });
     }
+
+    // Modal functionality for member profiles
+    clickableMembers.forEach(member => {
+        member.addEventListener('click', function() {
+            const name = this.getAttribute('data-name');
+            const position = this.getAttribute('data-position');
+            const party = this.getAttribute('data-party');
+            
+            document.getElementById('modalName').textContent = name;
+            document.getElementById('modalPosition').textContent = 'Position: ' + position;
+            document.getElementById('modalParty').textContent = 'Party: ' + party;
+            document.getElementById('modalDescription').textContent = 'I love TPO';
+            
+            modal.style.display = 'block';
+        });
+    });
+
+    // Close modal when X is clicked
+    closeBtn.addEventListener('click', function() {
+        modal.style.display = 'none';
+    });
+
+    // Close modal when clicking outside of it
+    window.addEventListener('click', function(event) {
+        if (event.target == modal) {
+            modal.style.display = 'none';
+        }
+    });
 
     // Show homepage initially
     homepage.classList.remove('hidden');
