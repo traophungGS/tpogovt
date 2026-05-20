@@ -32,6 +32,17 @@
         </ul>
     </nav>
 
+    <!-- Modal for member profile -->
+    <div id="memberModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="modalName"></h2>
+            <p id="modalPosition"></p>
+            <p id="modalParty"></p>
+            <p id="modalDescription" class="member-description"></p>
+        </div>
+    </div>
+
     <main class="container">
         <section class="homepage" id="homepage">
             <div class="boxes-grid">
@@ -94,32 +105,32 @@
                     </div>
                 </div>
                 <div class="members-list" id="cabinet-members-list">
-                    <div class="member">
+                    <div class="member clickable-member" data-name="Orthodoron" data-position="General Secretary" data-party="Secretarial Pact">
                         <h4>Orthodoron</h4>
                         <p>General Secretary</p>
                         <p class="party">Secretarial Pact</p>
                     </div>
-                    <div class="member">
+                    <div class="member clickable-member" data-name="Vacant" data-position="General Secretary 2" data-party="Independent">
                         <h4>Vacant</h4>
                         <p>General Secretary 2</p>
                         <p class="party">Independent</p>
                     </div>
-                    <div class="member">
+                    <div class="member clickable-member" data-name="Vacant" data-position="Vice Secretary" data-party="Independent">
                         <h4>Vacant</h4>
                         <p>Vice Secretary</p>
                         <p class="party">Independent</p>
                     </div>
-                    <div class="member">
+                    <div class="member clickable-member" data-name="Ffsgje" data-position="Speaker of the Semblæ" data-party="Goon Squad">
                         <h4>Ffsgje</h4>
                         <p>Speaker of the Semblæ</p>
                         <p class="party">Goon Squad</p>
                     </div>
-                    <div class="member">
+                    <div class="member clickable-member" data-name="Bostic0217" data-position="Appointed Member" data-party="Secretarial Pact">
                         <h4>Bostic0217</h4>
                         <p>Appointed Member</p>
                         <p class="party">Secretarial Pact</p>
                     </div>
-                    <div class="member">
+                    <div class="member clickable-member" data-name="1234hunh" data-position="Appointed Member" data-party="Black Pepper Party">
                         <h4>1234hunh</h4>
                         <p>Appointed Member</p>
                         <p class="party">Black Pepper Party</p>
@@ -139,7 +150,7 @@
                             <span class="author">Clerk of the Cabinet</span>
                         </p>
                         <p class="news-summary">Ortho releases government website</p>
-                        <p class="news-body">The General Secretary Orthodoron today released the official Trao Phung government website that provides citizens with basic legislative information, [...]
+                        <p class="news-body">The General Secretary Orthodoron today released the official Trao Phung government website that provides citizens with basic legislative information, [...]</p>
                         <button class="share-btn" onclick="shareNews('General Secretary unveils government website')">Share</button>
                     </article>
                 </div>
@@ -168,61 +179,61 @@
                     </div>
                 </div>
                 <div class="members-list">
-                    <div class="member">
+                    <div class="member clickable-member" data-name="Ffsgje" data-position="Speaker - Majority Whip" data-party="Progressive Party">
                         <h4>Ffsgje</h4>
                         <p>Speaker - Majority Whip</p>
                         <p class="party">Progressive Party</p>
                         <p class="seats">Seat: 2</p>
                     </div>
-                    <div class="member">
+                    <div class="member clickable-member" data-name="Orthodoron" data-position="Majority Leader" data-party="Secretarial Pact">
                         <h4>Orthodoron</h4>
                         <p>Majority Leader</p>
                         <p class="party">Secretarial Pact</p>
                         <p class="seats">Seat: 2</p>
                     </div>
-                    <div class="member">
+                    <div class="member clickable-member" data-name="Fevga" data-position="Minority Leader" data-party="Eastern Federation">
                         <h4>Fevga</h4>
                         <p>Minority Leader</p>
                         <p class="party">Eastern Federation</p>
                         <p class="seats">Seat: 1</p>
                     </div>
-                    <div class="member">
+                    <div class="member clickable-member" data-name="Meadowie" data-position="Minority Whip" data-party="Eastern Federation">
                         <h4>Meadowie</h4>
                         <p>Minority Whip</p>
                         <p class="party">Eastern Federation</p>
                         <p class="seats">Seat: 1</p>
                     </div>
-                    <div class="member">
+                    <div class="member clickable-member" data-name="Ceelinder" data-position="Representative" data-party="Secretarial Pact">
                         <h4>Ceelinder</h4>
                         <p>Representative</p>
                         <p class="party">Secretarial Pact</p>
                         <p class="seats">Seat: 2</p>
                     </div>
-                    <div class="member">
+                    <div class="member clickable-member" data-name="1234hunh" data-position="Representative" data-party="Black Pepper Party">
                         <h4>1234hunh</h4>
                         <p>Representative</p>
                         <p class="party">Black Pepper Party</p>
                         <p class="seats">Seat: 2</p>
                     </div>
-                    <div class="member">
+                    <div class="member clickable-member" data-name="Amenia123" data-position="Representative" data-party="Black Pepper Party">
                         <h4>Amenia123</h4>
                         <p>Representative</p>
                         <p class="party">Black Pepper Party</p>
                         <p class="seats">Seat: 1</p>
                     </div>
-                    <div class="member">
+                    <div class="member clickable-member" data-name="You671" data-position="Representative" data-party="Black Pepper Party">
                         <h4>You671</h4>
                         <p>Representative</p>
                         <p class="party">Black Pepper Party</p>
                         <p class="seats">Seat: 1</p>
                     </div>
-                    <div class="member">
+                    <div class="member clickable-member" data-name="Rabattues" data-position="Representative" data-party="Eastern Federation">
                         <h4>Rabattues</h4>
                         <p>Representative</p>
                         <p class="party">Eastern Federation</p>
                         <p class="seats">Seat: 1</p>
                     </div>
-                    <div class="member">
+                    <div class="member clickable-member" data-name="Integrity3x" data-position="Representative" data-party="Goon Squad">
                         <h4>Integrity3x</h4>
                         <p>Representative</p>
                         <p class="party">Goon Squad</p>
@@ -271,7 +282,7 @@
                             <span class="author">Legislative Reporter</span>
                         </p>
                         <p class="news-summary">Budget reform legislation approved in committee</p>
-                        <p class="news-body">The Semblæ has passed comprehensive budget reform legislation aimed at improving fiscal efficiency and transparency in government spending. The bill [...]
+                        <p class="news-body">The Semblæ has passed comprehensive budget reform legislation aimed at improving fiscal efficiency and transparency in government spending. The bill [...]</p>
                         <button class="share-btn" onclick="shareNews('Semblæ Passes Budget Reform Bill')">Share</button>
                     </article>
                 </div>
